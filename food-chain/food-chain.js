@@ -5,45 +5,43 @@ var FoodChain = function () {
 };
 
 FoodChain.prototype.header = function (n) {
+    phrase = 'I know an old lady who swallowed a ';
     switch (n) {
         case 1:
-            return 'I know an old lady who swallowed a fly.\n';
+            return phrase + 'fly.\n';
         case 2:
-            return 'I know an old lady who swallowed a spider.\n' +
-                'It wriggled and jiggled and tickled inside her.\n';
+            return phrase + 'spider.\n' + 'It wriggled and jiggled and tickled inside her.\n';
         case 3:
-            return 'I know an old lady who swallowed a bird.\n' +
-                'How absurd to swallow a bird!\n';
+            return phrase + 'bird.\n' + 'How absurd to swallow a bird!\n';
         case 4:
-            return 'I know an old lady who swallowed a cat.\n' +
-                'Imagine that, to swallow a cat!\n';
+            return phrase + 'cat.\n' + 'Imagine that, to swallow a cat!\n';
         case 5:
-            return 'I know an old lady who swallowed a dog.\n' +
-                'What a hog, to swallow a dog!\n';
+            return phrase + 'dog.\n' + 'What a hog, to swallow a dog!\n';
         case 6:
-            return 'I know an old lady who swallowed a goat.\n' +
-                'Just opened her throat and swallowed a goat!\n';
+            return phrase + 'goat.\n' + 'Just opened her throat and swallowed a goat!\n';
         case 7:
-            return 'I know an old lady who swallowed a cow.\n' +
-                'I don\'t know how she swallowed a cow!\n';
+            return phrase + 'cow.\n' + 'I don\'t know how she swallowed a cow!\n';
     }
 };
 
 FoodChain.prototype.body = function (n) {
+    sst = 'She swallowed the ';
+    tct = ' to catch the ';
     out = '';
+
     switch (n) {
         case 7:
-            out += 'She swallowed the cow to catch the goat.\n';
+            out += sst + 'cow' + tct + 'goat.\n';
         case 6:
-            out += 'She swallowed the goat to catch the dog.\n';
+            out += sst + 'goat' + tct + 'dog.\n';
         case 5:
-            out += 'She swallowed the dog to catch the cat.\n';
+            out += sst + 'dog' + tct + 'cat.\n';
         case 4:
-            out += 'She swallowed the cat to catch the bird.\n';
+            out += sst + 'cat' + tct + 'bird.\n';
         case 3:
-            out += 'She swallowed the bird to catch the spider that wriggled and jiggled and tickled inside her.\n';
+            out += sst + 'bird' + tct + 'spider that wriggled and jiggled and tickled inside her.\n';
         case 2:
-            out += 'She swallowed the spider to catch the fly.\n';
+            out += sst + 'spider' + tct + 'fly.\n';
         default:
             break;
     }
